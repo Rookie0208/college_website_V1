@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* overflow: hidden; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(102, 55, 18, 0.7), rgba(184, 83, 16, 0.895)), url(../../photos/eduford_img/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ABOUT US */
+.upper-text {
+    font-family: 'Montserrat', sans-serif;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding-top: 10px;
+}
+
+.middle-content {
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.middle-content img {
+    width: 580px;
+    max-width: 100%;
+    height: auto;
+    padding: 0 10px;
+}
+
+.middle-content .middle-text {
+    width: 600px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.main {
+    width: 1290px;
+    max-width: 95%;
+    margin: 0 auto;
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around; */
+}
+
+.middle-text h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 60px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #777;
+}
+
+.middle-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 35px;
+    color: #a62a2a;
+}
+
+/* responsive */
+@media screen and (max-width: 1250px) {
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .middle-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .main img {
+        margin-bottom: 35px;
+    }
+
+    .middle-text h1 {
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    .middle-text p {
+        font-size: 20px;
+    }
+
+    .upper-text p {
+        font-size: 20px;
+    }
+}
+
+/* TIME LINE CONTAINER */
+.about-timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.timeline-container {
+    /* background-color: rgba(110, 110, 110, 0.5); */
+    padding: 10px 30px;
+    position: relative;
+    width: 50%;
+    /* background-color: #e9d3d3; */
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+
+}
+@keyframes movedown {
+    0% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.timeline-container:nth-child(1) {
+    animation-delay: 0s;
+}
+.timeline-container:nth-child(2) {
+    animation-delay: 1s;
+}
+.timeline-container:nth-child(3) {
+    animation-delay: 2s;
+}
+.timeline-container:nth-child(4) {
+    animation-delay: 3s;
+}
+.timeline-container:nth-child(5) {
+    animation-delay: 4s;
+}
+
+.timeline-text {
+    padding: 20px 30px;
+    background-color: #fcf5f5;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+.left-container {
+    left: 1;
+}
+.right-container {
+    left: 55%;
+}
+
+.timeline-container img {
+    /* color: brown; */
+    position: absolute;
+    width: 40px;
+    right: -20px;
+    top: 32px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.right-container img {
+    left: -20px;
+}
+.about-timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: #000;
+    top: 0;
+    left: 55%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 6s linear forwards;
+}
+    /* TIME LINE ANIMATION */
+    @keyframes moveline {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+.timeline-text h2 {
+    font-weight: 600;
+}
+.timeline-text small{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.left-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fcf5f5;
+    left: 94.5%;
+}
+.right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fcf5f5;
+    right: 94.5%;
+}
+
+@media screen and (max-width: 600px) {
+    .about-timeline {
+        margin: 30px auto;
+    }
+    .about-timeline::after {
+        left: 31px;
+    }
+    .timeline-container {
+        width: 80%;
+        padding-left: 70px;
+        /* padding-right: 25px; */
+    }
+    .timeline-text {
+        font-size: 13px;
+    }
+    .timeline-text small {
+        margin-bottom: 10px;
+    }
+    .right-container {
+        left: 0;
+    }
+    .left-container img, .right-container img {
+        left: 10px;
+    }
+    .left-container-arrow, .right-container-arrow {
+        left: 12%;
+        border-right: 15px solid #fcf5f5;
+        border-left: 0;
+
+    }
+}
+
+
+/* ********************** Accredition and Recognition ******************* */
+.awards-main {
+    height: 450px;
+    /* background-color: yellow; */
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.awards h1 {
+    font-family: 'Rajdhani', sans-serif;
+    margin-left: 40px;
+    /* padding: 20px; */
+    font-size: 60px;
+    letter-spacing: 1px;
+}
+.img {
+    height: 100px;
+}
+.awards-imgs {
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    grid-auto-flow: row;
+    grid-row-gap: 40px;
+    justify-content: center;
+    /* margin: 0 auto; */
+    padding: 0;
+}
+
+/* .img1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+} */
+
+@media screen and (max-width: 600px) {
+    .awards h1 {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+    .awards-imgs {
+        grid-template-columns: repeat(3,118px);
+        grid-row-gap: 40px;
+        grid-column-gap: 0px;
+        /* margin: auto; */
+    }
+    .img {
+        height: 80px;
+    }
+}
